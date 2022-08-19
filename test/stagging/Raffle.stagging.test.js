@@ -6,7 +6,7 @@ const { developmentChains, networkConfig } = require("../../helper-hardhat-confi
 
 developmentChains.includes(network.name)
     ? describe.skip
-    : describe("Raffle unit test", async () => {
+    : describe("Raffle staging test", async () => {
           let raffle, raffleEntranceFee
           beforeEach(async () => {
               deployer = (await getNamedAccounts()).deployer
@@ -48,7 +48,7 @@ developmentChains.includes(network.name)
                       // Then Entering Raffle
                       console.log("Entering Raffle....")
                       const tx = await raffle.enterRaffle({ value: raffleEntranceFee })
-                      await tx.wait(2)
+                      await tx.wait(6)
                       console.log("Ok, time to wait...")
                       const winnerStartingBalance = await accounts[0].getBalance()
                       // await raffle.performUpkeep("0x") // add this line in your staging test
