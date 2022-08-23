@@ -43,15 +43,15 @@ module.exports = {
         localhost: {
             chainId: 31337,
         },
-        kovan: {
-            url: KOVAN_RPC_URL,
-            accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-            //accounts: {
-            //     mnemonic: MNEMONIC,
-            // },
-            saveDeployments: true,
-            chainId: 42,
-        },
+        // kovan: {
+        //     url: KOVAN_RPC_URL,
+        //     accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+        //     //accounts: {
+        //     //     mnemonic: MNEMONIC,
+        //     // },
+        //     saveDeployments: true,
+        //     chainId: 42,
+        // },
         rinkeby: {
             url: RINKEBY_RPC_URL,
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
@@ -70,21 +70,21 @@ module.exports = {
             saveDeployments: true,
             chainId: 5,
         },
-        mainnet: {
-            url: MAINNET_RPC_URL,
-            accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-            //   accounts: {
-            //     mnemonic: MNEMONIC,
-            //   },
-            saveDeployments: true,
-            chainId: 1,
-        },
-        polygon: {
-            url: POLYGON_MAINNET_RPC_URL,
-            accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-            saveDeployments: true,
-            chainId: 137,
-        },
+        // mainnet: {
+        //     url: MAINNET_RPC_URL,
+        //     accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+        //     //   accounts: {
+        //     //     mnemonic: MNEMONIC,
+        //     //   },
+        //     saveDeployments: true,
+        //     chainId: 1,
+        // },
+        // polygon: {
+        //     url: POLYGON_MAINNET_RPC_URL,
+        //     accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+        //     saveDeployments: true,
+        //     chainId: 137,
+        // },
     },
     etherscan: {
         // yarn hardhat verify --network <NETWORK> <CONTRACT_ADDRESS> <CONSTRUCTOR_PARAMETERS>
@@ -119,8 +119,11 @@ module.exports = {
     solidity: {
         compilers: [
             {
-                version: "0.8.9",
+                version: "0.8.7",
             },
+            // {
+            //     version: "0.8.9",
+            // },
             {
                 version: "0.4.24",
             },
