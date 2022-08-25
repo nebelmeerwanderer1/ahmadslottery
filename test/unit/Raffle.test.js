@@ -158,7 +158,7 @@ const { developmentChains, networkConfig } = require("../../helper-hardhat-confi
                               const numPlayers = await raffle.getNumberOfPlayers()
                               const winnerEndingBalance = await accounts[1].getBalance()
                               assert.equal(numPlayers, "0")
-                              assert.equal(raffleState, "1")
+                              assert.equal(raffleState, "0")
                               assert(endingTimeStamp > startingTimeStamp)
                               assert.equal(
                                   winnerEndingBalance.toString(),
